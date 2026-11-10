@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { auth } from "@/auth";
-import { FiCode, FiCompass, FiPlus, FiArrowRight, FiCheckCircle, FiLayers, FiShield, FiZap } from "react-icons/fi";
+import { FiCode, FiCompass, FiPlus, FiArrowRight, FiCheckCircle, FiLayers, FiShield, FiZap, FiCpu, FiTerminal, FiGlobe, FiUsers } from "react-icons/fi";
 import { Theme } from "@/components/Theme";
 
 export default async function HomePage() {
@@ -10,10 +10,10 @@ export default async function HomePage() {
   return (
     <div className="min-h-[calc(100vh-73px)] bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors flex flex-col justify-between">
       
-      <main className="w-full space-y-16">
+      <main className="w-full space-y-20 pb-16">
         
         {/* Hero Section with Background Image & Overlay */}
-        <div className="relative bg-slate-900 text-white overflow-hidden py-24 sm:py-32 px-6 border-b border-slate-200 dark:border-slate-800">
+        <div className="relative bg-slate-900 text-white overflow-hidden py-24 sm:py-36 px-6 border-b border-slate-200 dark:border-slate-800">
           
           {/* Background Image with Opacity & Gradient Overlay */}
           <div 
@@ -28,8 +28,8 @@ export default async function HomePage() {
           <div className="relative max-w-4xl mx-auto text-center space-y-6">
             
             {/* Top Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-950/60 text-emerald-400 border border-emerald-800/60 backdrop-blur-md mx-auto shadow-sm">
-              <FiZap className="text-emerald-400" /> DevConnect Ecosystem • Built for Modern Builders
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold bg-emerald-950/70 text-emerald-400 border border-emerald-800/60 backdrop-blur-md mx-auto shadow-sm">
+              <FiZap className="text-emerald-400" /> Next.js 16 • Firebase Firestore • Multi-OAuth Ecosystem
             </div>
 
             <h1 className="text-4xl sm:text-6xl font-black tracking-tight leading-tight">
@@ -80,11 +80,35 @@ export default async function HomePage() {
           </div>
         </div>
 
-        {/* Feature Grid Section */}
-        <div className="max-w-5xl mx-auto px-6 space-y-12">
+        {/* Live Ecosystem Stats / Trust Strip */}
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-3xl p-6 sm:p-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center shadow-xs">
+            <div className="space-y-1 border-r border-slate-100 dark:border-slate-800 last:border-none">
+              <p className="text-2xl sm:text-3xl font-black text-[#115E59] dark:text-emerald-400">100%</p>
+              <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Cloud Firestore Sync</p>
+            </div>
+            <div className="space-y-1 md:border-r border-slate-100 dark:border-slate-800">
+              <p className="text-2xl sm:text-3xl font-black text-[#115E59] dark:text-emerald-400">OAuth</p>
+              <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Google & GitHub Link</p>
+            </div>
+            <div className="space-y-1 border-r border-slate-100 dark:border-slate-800 last:border-none">
+              <p className="text-2xl sm:text-3xl font-black text-[#115E59] dark:text-emerald-400">Live</p>
+              <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Project Feed</p>
+            </div>
+            <div className="space-y-1">
+              <p className="text-2xl sm:text-3xl font-black text-[#115E59] dark:text-emerald-400">Dark</p>
+              <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Mode Ready UI</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Core Capabilities Grid */}
+        <div className="max-w-5xl mx-auto px-6 space-y-10">
           <div className="text-center space-y-2">
-            <h2 className="text-xs font-bold uppercase tracking-widest text-[#115E59] dark:text-emerald-400">Core Capabilities</h2>
-            <h3 className="text-2xl font-black tracking-tight">Everything you need to broadcast your work</h3>
+            <span className="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/40 text-[#115E59] dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800">
+              Engineered For Builders
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-black tracking-tight pt-2">Everything you need to broadcast your work</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -93,19 +117,19 @@ export default async function HomePage() {
               <div className="w-12 h-12 rounded-2xl bg-emerald-50 dark:bg-emerald-950/50 text-[#115E59] dark:text-emerald-400 flex items-center justify-center font-bold text-lg">
                 <FiCode />
               </div>
-              <h3 className="font-bold text-base">Repository Showcase</h3>
+              <h3 className="font-bold text-base">Repository Showcases</h3>
               <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Publish your projects with structured tech stack tags, GitHub links, and live deployment previews synced instantly.
+                Publish your projects with structured tech stack tags, GitHub links, and live deployment previews synced instantly to Firestore.
               </p>
             </div>
 
             <div className="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-xs space-y-3">
               <div className="w-12 h-12 rounded-2xl bg-emerald-50 dark:bg-emerald-950/50 text-[#115E59] dark:text-emerald-400 flex items-center justify-center font-bold text-lg">
-                <FiLayers />
+                <FiUsers />
               </div>
-              <h3 className="font-bold text-base">Developer Discovery</h3>
+              <h3 className="font-bold text-base">Persistent Profiles</h3>
               <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Explore profiles of fellow engineers, view their technical stacks, and update your personal handle across sessions.
+                Manage your personal developer handles, sync your Google or GitHub avatars, and update usernames with persistent database storage.
               </p>
             </div>
 
@@ -113,28 +137,51 @@ export default async function HomePage() {
               <div className="w-12 h-12 rounded-2xl bg-emerald-50 dark:bg-emerald-950/50 text-[#115E59] dark:text-emerald-400 flex items-center justify-center font-bold text-lg">
                 <FiShield />
               </div>
-              <h3 className="font-bold text-base">Secure SaaS Dashboard</h3>
+              <h3 className="font-bold text-base">Secure SaaS Session</h3>
               <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Manage your published portfolio items and track account metrics behind robust multi-provider OAuth session authentication.
+                Protected by Auth.js and NextAuth strategy rules, ensuring seamless login routing and data integrity across all your routes.
               </p>
             </div>
 
           </div>
         </div>
 
-        {/* Platform Highlights Banner */}
-        <div className="max-w-5xl mx-auto px-6 pb-12">
+        {/* Workflow Showcase Banner */}
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="bg-gradient-to-br from-slate-900 to-slate-950 text-white rounded-3xl p-8 md:p-12 border border-slate-800 shadow-xl flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="space-y-3 max-w-xl text-center md:text-left">
+              <div className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-400">
+                <FiTerminal /> Streamlined Developer Workflow
+              </div>
+              <h3 className="text-2xl font-black">Ready to explore what others are building?</h3>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                Browse through community submissions, check out full-stack tech stacks, and find inspiration for your next application.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+              <Link
+                href="/explore-projects"
+                className="px-6 py-3.5 rounded-xl font-bold text-xs bg-white text-slate-900 hover:bg-slate-100 transition-colors flex items-center justify-center gap-2 shadow-md cursor-pointer whitespace-nowrap"
+              >
+                <FiCompass /> Explore Feed
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Platform Bottom Call to Action */}
+        <div className="max-w-5xl mx-auto px-6">
           <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs">
             <div className="space-y-2 text-center md:text-left">
-              <h3 className="text-xl font-black tracking-tight">Ready to launch your developer profile?</h3>
-              <p className="text-xs text-slate-600 dark:text-slate-400">Join the platform, customize your handle, and start submitting code builds today.</p>
+              <h3 className="text-xl font-black tracking-tight">Join the DevConnect Community Today</h3>
+              <p className="text-xs text-slate-600 dark:text-slate-400">Sign in with your preferred provider and publish your first portfolio project in seconds.</p>
             </div>
             <Link
               href={isAuthenticated ? "/submit-project" : "/signin"}
-              className="px-6 py-3 rounded-xl font-bold text-xs text-white shadow-sm hover:opacity-90 transition-opacity flex items-center gap-2 cursor-pointer whitespace-nowrap"
+              className="px-6 py-3.5 rounded-xl font-bold text-xs text-white shadow-sm hover:opacity-90 transition-opacity flex items-center gap-2 cursor-pointer whitespace-nowrap"
               style={{ backgroundColor: Theme.primary }}
             >
-              <span>Get Started Now</span>
+              <span>{isAuthenticated ? "Submit Project Now" : "Get Started Now"}</span>
               <FiArrowRight />
             </Link>
           </div>
